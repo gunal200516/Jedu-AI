@@ -1,12 +1,9 @@
 [build]
-  # Build command for Flutter web
-  command = "flutter build web --release --web-renderer canvaskit"
-  # Output directory after build
+  command = "bash ./netlify-build.sh"
   publish = "build/web"
 
-[build.environment]
-  # Flutter version (adjust if needed)
-  FLUTTER_VERSION = "3.10.0"
+[context.production.environment]
+  FLUTTER_VERSION = "stable"
 
 # Redirect rules for Flutter web app
 [[redirects]]

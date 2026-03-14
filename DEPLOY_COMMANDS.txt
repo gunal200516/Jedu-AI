@@ -1,0 +1,71 @@
+═══════════════════════════════════════════════════════════════
+  🚀 NETLIFY DEPLOYMENT - COPY & PASTE THESE COMMANDS
+═══════════════════════════════════════════════════════════════
+
+STEP 1: Add the fixed files
+────────────────────────────────────────────────────────────────
+git add netlify.toml netlify-build.sh NETLIFY_FIX_APPLIED.md
+
+
+STEP 2: Commit the changes
+────────────────────────────────────────────────────────────────
+git commit -m "Fix Netlify build: Add Flutter installation script"
+
+
+STEP 3: Push to GitHub
+────────────────────────────────────────────────────────────────
+git push origin main
+
+
+═══════════════════════════════════════════════════════════════
+  ✅ THAT'S IT! 
+═══════════════════════════════════════════════════════════════
+
+After pushing:
+1. Go to https://app.netlify.com/
+2. Click on your site
+3. Watch the build progress (8-12 minutes)
+4. Your site will be LIVE!
+
+═══════════════════════════════════════════════════════════════
+  🔥 POST-DEPLOYMENT (IMPORTANT!)
+═══════════════════════════════════════════════════════════════
+
+After build completes:
+1. Copy your Netlify URL (e.g., https://your-site.netlify.app)
+2. Go to https://console.firebase.google.com/
+3. Select your project → Authentication → Settings
+4. Add your Netlify URL to "Authorized domains"
+5. Test login at your Netlify URL
+
+═══════════════════════════════════════════════════════════════
+  📊 WHAT THE BUILD WILL DO
+═══════════════════════════════════════════════════════════════
+
+✅ Clone your repository from GitHub
+✅ Install Flutter SDK (stable channel)
+✅ Enable Flutter web support
+✅ Download web build artifacts
+✅ Run flutter pub get (install dependencies)
+✅ Build your app: flutter build web --release
+✅ Deploy to Netlify CDN
+✅ Your app goes LIVE!
+
+Build time: 8-12 minutes (first time)
+            3-5 minutes (subsequent builds)
+
+═══════════════════════════════════════════════════════════════
+  🎯 QUICK TEST AFTER DEPLOYMENT
+═══════════════════════════════════════════════════════════════
+
+Visit your Netlify URL and login:
+Email: admin@vsb.edu
+Password: admin123
+
+Check:
+✅ Login works
+✅ Dashboard loads
+✅ Navigation works
+✅ No console errors (F12)
+
+═══════════════════════════════════════════════════════════════
